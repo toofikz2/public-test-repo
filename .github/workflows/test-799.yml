@@ -1,0 +1,9 @@
+name: Test 799 environment gate
+on:
+  workflow_dispatch:
+jobs:
+  wait:
+    runs-on: ubuntu-latest
+    environment: test-799
+    steps:
+      - run: echo "test value 799"
